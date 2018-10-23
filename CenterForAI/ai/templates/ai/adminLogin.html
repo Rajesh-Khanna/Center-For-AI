@@ -1,0 +1,15 @@
+{% extends 'ai/base.html' %}
+{% block body %}
+<div align="center">
+    <br><br><br>
+    <div class="border rounded border-dark p-4" style="display:inline-block;">
+        <h1><span class="ttl"> Login </span></h1>
+        <br>
+        <form action="post" method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

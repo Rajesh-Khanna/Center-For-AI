@@ -1,0 +1,58 @@
+{% extends 'ai/base.html' %}
+{% block body %}
+    <h2 align='center'><span class="ttl">Events</span></h2>
+    <h3 class="pl-4">
+        Upcomming Events
+    </h3>
+    <div class="row">
+    {% for event in object_list.upcommingEvents %}
+    <div class="col-6 p-4">
+        <div class="card">
+            {% if event.event_link %}
+            <div class="card-header"><a href="{{ event.event_link }}">{{ event.event_title }}</a></div>
+            {% else %}
+            <div class="card-header">{{ event.event_title }}</div>
+            {% endif %}
+            <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5> -->
+              <h6 class="card-subtitle mb-2 text-muted">{{ event.event_subTitle }}</h6>
+              <p class="card-text">{{ event.event_description|linebreaks }}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted "> {{ event.event_date }} </small>
+              <small class="text-muted text-right" > {{ event.event_location }} </small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    <hr>
+    <h3 class="pl-4">
+        Past Events
+    </h3>
+    <div class="row">
+    {% for event in object_list.pastEvents %}
+    <div class="col-6 p-4">
+        <div class="card">
+                {% if event.event_link %}
+                <div class="card-header"><a href="{{ event.event_link }}">{{ event.event_title }}</a></div>
+                {% else %}
+                <div class="card-header">{{ event.event_title }}</div>
+                {% endif %}
+                <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5> -->
+              <h6 class="card-subtitle mb-2 text-muted">{{ event.event_subTitle }}</h6>
+              <p class="card-text">{{ event.event_description|linebreaks }}</p>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-between">
+                    <div class="">Date : {{ event.event_date }} </div>
+                    <div class="">Loaction : {{ event.event_location }} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    
+{% endblock %}

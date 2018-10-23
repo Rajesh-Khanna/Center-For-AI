@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Centre for Artificial Intelligence IIT Kharagpur</title>
+    <link rel="stylesheet" href="{% static 'ai/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'ai/bootstrap.css' %}"
+integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <script src="{% static 'ai/jquery-3.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'ai/popper.js' %}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="{% static 'ai/bootstrap.js' %}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Nav -->
+    <center>
+      <div id="coverTitle" class="w-100">
+        <div class="row container">
+          <div class="col-5">
+            <div class="d-flex align-items-center" style="height:100%;">
+              <span> Centre for Artificial Intelligence </span> </div>
+          </div>
+          <div class="col-2">
+            <div class="d-flex align-items-center" style="height:100%;">
+              <span> <img src="{% static 'ai/images/logo1.png' %}" class="w-100" alt="">
+              </span> </div>
+          </div>
+          <div class="col-5">
+            <div class="d-flex align-items-center" style="height:100%;">
+              <span> Indian Institute of Technology Kharagpur </span> </div>
+          </div>
+        </div>
+      </div>
+    </center>
+    <div class="">
+      <!-- cover image -->
+      <div class="conver_img w-100"> <img src="{% static 'ai/images/slider2.jpg' %}" alt="" class="w-100 img-fluid" style="max-width: 100%;height: auto;">
+        <div class="container rounded" id="navFixer">
+          <nav class="navbar rounded  navbar-expand-lg navbar-light bg-light p-4
+            mid_nav nvbar "> <button class="navbar-toggler"
+              type="button" data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false"
+              aria-label="Toggle navigation"> <span
+                class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="row text-center w-100">
+                <div class="col border-right border-dark active"> <a
+                    class="nav-link nv-link" href="/">Home</a>
+                </div>
+                <div class="col border-right border-dark"> <a
+                    class="nav-link nv-link" href="people">People</a>
+                </div>
+                <div class="col border-right border-dark ">
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nv-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item nv-link" href="ccourse">Certified Courses</a>
+                      <a class="dropdown-item nv-link" href="acourse">Academic Courses</a>
+                    </div>
+                  </div>
+                  </div>
+                <div class="col border-right border-dark"> <a
+                    class="nav-link nv-link"
+                    href="research">Research</a> </div>
+                <div class="col border-right border-dark"> <a
+                    class="nav-link nv-link" href="partner">Partnership</a>
+                </div>
+                <div class="col border-right border-dark"> <a
+                    class="nav-link nv-link"
+                    href="event">Events</a> </div>
+                <div class="col"> <a 
+                  class="nav-link nv-link" href="join">Join Us</a> </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- body -->
+      <center>
+          <div class="text-left" style="width:85%">
+            <!-- <hr class="bg-dark">     -->
+      {% block body %}
+      {% endblock %}
+          </div>
+          <br>
+      </center>
+      <div class="fotter" id="fotter">
+        <div class="container">
+          <center>
+            <ul class="list-inline">
+              <li class="list-inline-item border-right border-dark pr-2"><a
+                  href="file:///E:/AiCentre/index.html"
+                  class="text-dark">Home</a></li>
+              <li class="list-inline-item pr-2"> <a
+                  href="http://www.iitkgp.ac.in/" class="text-dark">IIT
+                  Kharagpur</a> </li>
+            </ul>
+            <ul class="list-inline">
+              <li class="list-inline-item border-right border-dark pr-2"><a
+                  href="file:///E:/AiCentre/under_construction.html"
+                  class="text-dark">Contact us</a></li>
+                  <li class="list-inline-item  border-right border-dark pr-2"> <a href="https://www.facebook.com/ai.iitkgp/"><img title'"facebook"="" alt="facebook" src="{% static 'ai/images/facebook-icon2.jpg' %}"  width="35"> </a> </li>
+                  <li class="list-inline-item pr-2">
+                    <a href="admin" class="text-dark">
+                      Admin
+                    </a>
+                  </li>
+            </ul>
+          </center>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

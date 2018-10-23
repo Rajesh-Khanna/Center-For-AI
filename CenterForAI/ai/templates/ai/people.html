@@ -1,0 +1,86 @@
+{% extends 'ai/base.html' %}
+{% load staticfiles %}
+{% block body %}
+<!-- body -->
+              <h1 align="center"><span class="ttl">People</span></h1>
+              <br>
+              <div class="container">
+                <h2 align="left">Affilated Faculty</h2>
+                  <br>  
+                  <div class="row">
+                      <div class="col-md-4 offset-md-7"> <h5 class="p-2"> Research Areas </h5> </div>
+                   </div>
+                  {% for person in object_list.faculty_list %}
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="{{ person.img.url }}" alt="{{ person.name }}" class="img-thumbnail" width="150" height="200"/>
+                    </div>
+                    <div class="col-md-4">
+                      <ul class="list-unstyled">
+                        <li><font color="#0000ff">{{ person.name }}</font></li>
+                        <li>{{ person.position }}</li>
+                        <li>{{ person.designation }}</li>
+                        <li>{{ person.email }}</li>
+                        <li>{{ person.contact_number }}</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3">
+                      {{ person.Research_Areas|linebreaks }}
+                    </div>
+                  </div>
+                  <hr>
+                {% endfor %}
+              </div>
+              <p><br>
+              </p>
+              <div class="container">
+                  <h2 align="left">Staff</h2>
+                  <br>
+                {% for person in object_list.staff_list %}
+                  <div class="row">
+                    <div class="col">
+                        <img src="{{ person.img.url }}" alt="{{ person.name }}" class="img-thumbnail" width="150" height="200"/>
+                      </div>
+                      <div class="col">
+                        <ul class="list-unstyled">
+                          <li><font color="#0000ff">{{ person.name }}</font></li>
+                          <li>{{ person.position }}</li>
+                          <li>{{ person.email }}</li>
+                          <li>{{ person.contact_number }}</li>
+                        </ul>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <p><br>
+              </p>
+              <div class="container">
+                  <h2 align="left">Students</h2>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-7"> <h5 class="p-2"> Research Areas </h5> </div>
+                     </div>
+                    {% for person in object_list.student_list %}
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img src="{{ person.img.url }}" alt="{{ person.name }}" class="img-thumbnail" width="150" height="200"/>
+                      </div>
+                      <div class="col-md-4">
+                        <ul class="list-unstyled">
+                          <li><font color="#0000ff">{{ person.name }}</font></li>
+                          <li>{{ person.position }}</li>
+                          <li>{{ person.designation }}</li>
+                          <li>{{ person.email }}</li>
+                          <li>{{ person.contact_number }}</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-3">
+                        {{ person.Research_Areas|linebreaks }}
+                      </div>
+                    </div>
+                    <hr>
+                  {% endfor %}
+                </div>
+            <br>
+          <br>
+ {% endblock %}

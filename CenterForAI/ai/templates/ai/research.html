@@ -1,0 +1,31 @@
+{% extends 'ai/base.html' %}
+{% block body %}
+    <h2 class="text-center"><small class="ttl">Research Projects</small></h2>
+    <br><br>
+    <table class="table table-hover table-bordered w-100">
+        <tbody class="text-center">
+            <tr>
+                <th><b>Title</b></td>
+                <th>Field</td>
+                <th>Description</td>
+                <th>sponsor</td>
+                <th>Principal Investigator</td>
+            </tr>
+
+            {% for project in object_list.projects_list %}
+            <tr>
+                {% if project.link %}
+                <td><a href={{ project.link }}><b>{{project.title}}</b></a></td>
+                {% else %}
+                <td><b>{{project.title}}</b></td>
+                {% endif %}                
+                <td>{{project.field}}</td>
+                <td>{{project.description|linebreaks }}</td>
+                <td>{{project.sponsor}}</td>
+                <td>{{ project.Principal_Investigator }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

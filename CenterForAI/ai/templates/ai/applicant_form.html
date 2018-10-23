@@ -1,0 +1,13 @@
+{% extends 'ai/base.html' %}
+{% block body %}
+<div class="container p-4 border border-dark">
+    <h2 class="text-center"><span class="ttl">Apply for this program</span></h2>
+    <form class="form-horizontal" action="" method=post>
+        {% csrf_token %}
+        {% include 'ai/form-template.html' %}
+        <div class="form-group" align='center'>
+            <button type='submit' class="btn btn-success pl-4 pr-4">Submit</button> 
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,265 @@
+{% extends 'ai/base.html' %}
+<!-- body -->
+{% load staticfiles %}
+
+{% block body %}
+  <div class="container-fluid  border">
+      <h2 align='center' class="p-2"><span class="ttl">Certificate Course</span></h2>
+        <div class="container-fluid">
+        <nav class="navbar rounded navbar-expand-lg bg-dark text-white p-4"> 
+          <button class="navbar-toggler"
+          type="button" data-toggle="collapse"
+          data-target="#subnav"
+          aria-controls="subnav" aria-expanded="false"
+          aria-label="Toggle navigation"> 
+          <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="subnav">
+          <div class="row text-center w-100">
+            <div class="col border-right border-light active"> <a
+                class="nav-link subnv-link" href="#Highlights">Highlights</a>
+            </div>
+            <div class="col border-right border-light"> <a
+                class="nav-link subnv-link" href="people">Faculty</a>
+            </div>
+            <div class="col border-right border-light"> <a
+                class="nav-link subnv-link" href="#Curriculum">Curriculum</a>
+            </div>
+            <div class="col border-right border-light"> <a
+                class="nav-link subnv-link"
+                href="#Apply">Apply Now</a> </div>
+            <div class="col"> <a
+                class="nav-link subnv-link" href="#FAQ">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="Highlights">
+      <div align="center">
+        <img src="{% static 'ai/images/iitkgp.png'%}" class="p-2" width="100px" alt="CenterForAI">
+        <img src="{% static 'ai/images/logo2.png'%}" width="200px" alt="IIT-KGP">
+      </div>
+      <h3 class="p-4 text-center"><span class="ttl">Certificate Course in Artificial Intelligence & Machine Learning </span></h3>
+      <div class="container">
+        <div class="card-deck">
+              <div class="card">
+                  <div class="card-header" style="background-color:#ac3;"><h5 class="card-title text-center text-white">Kolkata</h5></div>
+                  <div class="card-body">
+                    
+                    <p class="card-text">Address : IIT-KGP Center of Excellence<br>                   
+                    Address : IIT-KGP Center of Excellence<br>
+                    Address : IIT-KGP Center of Excellence </p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+                <img width="150px" src="{% static 'ai/images/pin.png' %}" alt="Card image cap">
+                <div class="card">
+                    <div class="card-header" style="background-color:#ac3;"><h5 class="card-title text-center text-white">Bengaluru</h5></div>
+                <div class="card-body">
+                    <p class="card-text">Address : IIT-KGP Center of Excellence<br>                   
+                      Address : IIT-KGP Center of Excellence<br>
+                      Address : IIT-KGP Center of Excellence </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br><br>
+      <div class="container">
+      <div class="row text-center p-4 ac3 rounded text-white">
+          <div class="col border-right border-light d-flex align-items-center">
+              <div class="">
+               <h5> IIT’s reputed faculty</h5>
+              </div>
+          </div>
+          <div class="col border-right border-light d-flex align-items-center">
+              <div class="">
+               <h5> Interaction with IIT alumni founded AI startups</h5>
+              </div>
+          </div>
+          <div class="col d-flex align-items-center border-right border-light">
+              <div class="">
+               <h5>Student friendly learning format</h5>
+              </div>
+          </div>
+          <div class="col d-flex align-items-center border-right border-light">
+              <div class="">
+               <h5> Exceptional peers</h5>
+              </div>
+          </div>
+          <div class="col d-flex align-items-center ">
+              <div class="">
+               <h5> Truly effective career Upgrade</h5>
+              </div>
+          </div>
+      </div>
+     </div>
+    </div>
+    <br><br>
+    <div id="Curriculum" class="container-fluid">
+      <h3 class="text-center"><span class="ttl">Course Curriculum</span></h3>
+      <br><br>
+      <div class="row">
+        <div class="col border p-2">
+          <h5 class="text-center pt-2 pb-2 ac3">Foundations</h5>
+          <ul class="">
+            <li>Linear Algebra</li>
+            <li>Intro to probability</li>
+            <li>Data structures & algorithms</li>
+            <li>AI: Search & Constraint satisfaction problems</li>
+          </ul>
+        </div>
+        <div class="col border p-2">
+            <h5 class="text-center pt-2 pb-2 ac3">Methods</h5>
+          <ul>
+            <li>Statistics & Data analytics</li>
+            <li>ML -1</li>
+            <li>ML -2</li>
+            <li>ML -3</li>
+            <li>Scalable Data mining</li>
+            <li>Deep Learning </li>
+          </ul>
+        </div>
+        <div class="col border p-2">
+            <h5 class="text-center pt-2 pb-2 ac3">Tools</h5>
+          <ul>
+            <li>Python for Data Sciences</li>
+            <li>Data Preparation & Visualization</li>
+            <li>Introduction to Libraries</li>
+          </ul>
+        </div>
+
+        <div class="col border p-2">
+            <h5 class="text-center pt-2 ac3 pb-2">Thematic Areas</h5>
+          <ul>
+            <li>Information retrieval & web search</li>
+            <li>Text & language processing</li>
+            <li>Image & Video Analytics</li>
+          </ul>
+        </div>
+        <div class="col border p-2">
+            <h5 class="text-center pt-2 pb-2 ac3">Capstone Project</h5>
+          <ul>
+            <li>Work on cutting edge AI projects sourced from deep technology companies</li>
+          </ul>
+        </div>
+      </div>
+      <br><br>
+      <div class="container" style="color:#444130;">
+        <h4><span class="font-weight-bold">Duration : 6 months</span></h4>
+        <br>
+        <h4><span class="font-weight-bold">Features</span></h4>
+        <ul class="list-group list-group-flush inline-block w-50 ml-4">
+            <li class="list-group-item">12 hours per week of contact lectures</li>
+            <li class="list-group-item">4-5 hours of self-learning time</li>
+            <li class="list-group-item">5-7 hours assignments & projects</li>
+            <li class="list-group-item">24*7 online labs</li>
+            <li class="list-group-item">Industry practice workshops by seasoned industry leaders</li>
+          </ul>
+        <br>
+          <h3 class="text-center"><a href="#">Download Curriculum</a></h3> 
+          <!-- {% static 'ai/files/curriculum.pdf' %} -->
+        <br>
+        <h4><span class="font-weight-bold">PROGRAM FEE</span></h4>
+        <p class="pl-4 text-primary">INR <b><u>4,00,000 (Incl. of all taxes)</u></b>
+            Flexible Payment Options Available
+            </p>
+        <br>
+        <h4><span class="font-weight-bold">ELIGIBILITY</span></h4>
+        <ul class="list-group list-group-flush inline-block ml-4">
+            <li class="list-group-item">Good knowledge of at least one programming language with good experience and proficiency in programming</li>
+            <li class="list-group-item">Good mathematical maturity having done courses in basic linear algebra, calculus and probability at the college level</li>
+            <li class="list-group-item">BTech or BE in any Engineering stream or M.Sc. / MCA with mathematics and programming at the graduate level</li>
+            <li class="list-group-item">Working professionals / Final year students are eligible to apply</li>
+          </ul>
+          <br><br>
+          <h4><span class="font-weight-bold">PROGRAM CERTIFICATION</span></h4>
+          <br>
+          <div align="center">
+            {% for certi in object_list.certi_list %}
+              <img src="{{ certi.certi_img.url }}" height="400px;"  alt="certificate">
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="Apply" class="bg-dark rounded">
+      <div class="container ">
+          <hr class="border-dark">
+
+        <h2 class="text-center"><span class="ttl text-light">Join the Program now!</span></h2>        
+        <div class=" p-4  rounded">
+          <div class="row">
+            <div class="col border-right border-light" >
+              <div class="circle-text">
+                <h3>1</h3>
+                Apply
+              </div>
+            </div>
+            <div class="col border-right border-light">
+              <div class="circle-text">
+                  <h3>2</h3>
+                  Give Entrance Exam
+              </div>
+            </div>
+            <div class="col border-right border-light">
+              <div class="circle-text">
+                  <h3>3</h3>
+                  Wait for Shortlist
+            </div>
+              </div>
+              <div class="col border-right border-light">
+              <div class="circle-text">
+                  <h3>4</h3>
+                  Pay Joining Fees
+            </div>
+            </div>
+            <div class="col">
+              <div class="circle-text">
+                  <h3>5</h3>
+                  Pay Full Fees
+            </div>
+            </div>
+          </div>
+          <br><br>
+          <div align="center">
+            <a href="apply" class="btn btn-success"><h3 style="font-family:Arial; padding-left: 2em; padding-right: 2em;">Apply Now</h3></a>
+          </div>
+          <br><br>
+          <div class="row" style="color:#444130;" >
+            <div class="col-3">
+              <h2>
+            <span class="hilight rounded">0% EMI</span></h2>
+          </div>
+          <div class="col-4">
+          <span class="hilight rounded">Merit Scholarship</span>
+          </div>
+          <div class="col-5">
+          <span class="hilight rounded">Scholarship for Physically Disabled & Financially weak</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <hr class="border-dark">
+    <br><br>
+    <div id="FAQ" class="container-fluid">
+        <h2 class="text-center"><span class="ttl">Frequently Asked Questions</span></h2>        
+      <!-- <div class="row"> -->
+          <div class="card-columns" >
+        {% for questions in object_list.question_list%}
+        <!-- <div class="col-6 p-2"> -->
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">{{ questions.question }}</div>
+                <div class="card-body " style=" text-indent: 25px;">
+                  <p class="card-text">{{ questions.answer|linebreaks }}</p>
+                </div>
+              <!-- </div> -->
+        </div>
+      {% endfor %}
+    </div>
+    </div>
+    <br>
+  </div>
+          <br>
+          <br>
+{% endblock %}
